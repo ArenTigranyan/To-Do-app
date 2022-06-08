@@ -11,7 +11,7 @@ const addToDo = () => {
     let deletebtn = document.createElement('button');
     deletebtn.className = 'delete';
     deletebtn.innerHTML = 'X';
-    todo.className = 'todo'
+    todo.className = 'todo';
     p.className = 'title';
     p.append(title);
     todo.append(p, deletebtn);
