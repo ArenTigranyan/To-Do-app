@@ -1,54 +1,35 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do</title>
-  </head>
-  <body>
-    <div id="container">
-      <h2>To-Do-list</h2>
-      <input type="text" id="input" placeholder="text" />
-      <button id="addbtn">submit</button>
-    </div>
-    <div class="list">
-      <div>
-        <p></p>
-      </div>
-      <div>
-        <h1></h1>
-      </div>
-      <div>
-        <p></p>
-      </div>
-      <div>
-        <p></p>
-      </div>
-    </div>
-    <script src="main.js"></script>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>To-Do List</title>
   </head>
+
   <body>
-    <div id="header">
-      <h1 id="main">To-Do list</h1>
-      <div>
-        <input type="text" placeholder="title" id="input" />
-        <button id="add">Add</button>
+    <header>
+      <h1>To-Do List</h1>
+    </header>
+
+    <form onsubmit="preventReloading()">
+      <input type="text" id="input-title" />
+      <div id="add-container">
+        <button id="add">
+          <i class="fa-solid fa-circle-plus"></i>
+        </button>
       </div>
-    </div>
-    <div id="list"></div>
-    <script src="./main.js"></script>
+    </form>
+
+    <ul id="list"></ul>
+
+    <script src="main.js"></script>
   </body>
 </html>
