@@ -87,17 +87,16 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#add {
-  padding: 0.2em;
-  font-size: 3.5em;
-  background-image: $gradient;
-  background-size: 300%;
-  background-clip: text;
-  background-color: white;
-  color: transparent;
-  animation: bg-animation 5s infinite alternate;
+  #add {
+    padding: 0.2em;
+    font-size: 3.5em;
+    background-image: $gradient;
+    background-size: 300%;
+    background-clip: text;
+    background-color: white;
+    color: transparent;
+    animation: bg-animation 5s infinite alternate;
+  }
 }
 
 #input-title,
@@ -114,16 +113,15 @@ form {
   margin-inline: auto;
   width: max(20em, 65%);
   list-style: none;
-}
-
-.todo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 7vh;
-  width: inherit;
-  background: white;
-  font-size: 2em;
+  .todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    width: inherit;
+    background: white;
+    font-size: 2em;
+  }
 }
 
 .title {
