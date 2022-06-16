@@ -19,7 +19,8 @@ $gradient: linear-gradient(
   box-sizing: border-box;
   outline: none;
   -moz-appearance: none;
-  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  transition: all 0.3s ease;
   cursor: default;
 }
 
@@ -65,15 +66,15 @@ form {
   }
 }
 
+#input-title,
+#add-container {
+  height: 8vh;
+}
+
 #input-title {
   background: white;
   padding: 0.5em;
   font-size: 2.5em;
-}
-
-#input-title,
-#add-container {
-  height: 8vh;
 }
 
 #add-container {
@@ -90,6 +91,7 @@ form {
     background-color: white;
     color: transparent;
     animation: bg-animation 5s infinite alternate;
+    -webkit-transition-duration: 0.1s;
   }
 }
 
