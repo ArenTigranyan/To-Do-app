@@ -1,29 +1,36 @@
-const add = document.getElementById('add');
 const list = document.getElementById('list');
-let indexOfToDo = 0;
+const add = document.getElementById('add');
+
+const preventReloading = () => {
+  event.preventDefault();
+};
 
 const addToDo = () => {
-  const title = document.getElementById('input').value;
-  if (title !== '') {
-    indexOfToDo++;
+  let inputValue = document.getElementById('input-title').value;
+  if (inputValue !== '') {
     let todo = document.createElement('div');
-    let p = document.createElement('p');
-    let deletebtn = document.createElement('button');
-    deletebtn.className = 'delete';
-    deletebtn.innerHTML = 'X';
     todo.className = 'todo';
-    p.className = 'title';
-    p.append(title);
-    todo.append(p, deletebtn);
+    let title = document.createElement('li');
+    let checkmark = document.createElement('button');
+    checkmark.onclick = () => {
+      todo.classList.toggle('completed');
+    };
+    let trash = document.createElement('button');
+    trash.onclick = () => {
+      todo.classList.add('deleted');
+      todo.addEventListener('transitionend', () => {
+        todo.remove();
+      });
+    };
+    title.className = 'title';
+    title.innerText = inputValue;
+    checkmark.className = 'checkmark';
+    checkmark.innerHTML = '<i class="fa-solid fa-check"></i>';
+    trash.className = 'trash';
+    trash.innerHTML = '<i class="fa-solid fa-circle-minus"></i>';
+    todo.append(title, checkmark, trash);
     list.append(todo);
-    p.onclick = () => {
-      p.classList.toggle('checked');
-    };
-    deletebtn.onclick = () => {
-      todo.style.display = 'none';
-    };
-    console.log(p.classList);
-    document.getElementById('input').value = '';
+    document.getElementById('input-title').value = '';
   } else {
     alert('Type something');
   }
