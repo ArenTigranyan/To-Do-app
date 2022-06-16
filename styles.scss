@@ -24,7 +24,7 @@ $gradient: linear-gradient(
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-image: $gradient;
   background-size: 300%;
   color: white;
@@ -50,7 +50,7 @@ form {
 }
 
 header {
-  font-size: max(2em, 4vw);
+  font-size: max(4vw, 2em);
   font-weight: 900;
 }
 
@@ -71,15 +71,9 @@ form {
   font-size: 2.5em;
 }
 
-#input-title:focus {
-  background: transparent;
-  border-bottom: 3px solid white;
-}
-
-#input-title:focus + #add-container,
-#add-container:hover {
-  width: 8vh;
-  border-radius: 50%;
+#input-title,
+#add-container {
+  height: 8vh;
 }
 
 #add-container {
@@ -99,9 +93,18 @@ form {
   }
 }
 
-#input-title,
-#add {
-  height: 8vh;
+#input-title:focus {
+  background: transparent;
+  border-bottom: 3px solid white;
+}
+
+#input-title:focus + #add-container,
+#add-container:hover {
+  background: transparent;
+  #add {
+    color: white;
+    transform: rotateZ(180deg);
+  }
 }
 
 #list {
@@ -121,6 +124,10 @@ form {
     width: inherit;
     background: white;
     font-size: 2em;
+  }
+  .todo:hover {
+    width: max(70%, 11em);
+    margin-bottom: 0.5em;
   }
 }
 
