@@ -1,98 +1,149 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+*,
+*:hover,
+*:focus,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
   border: none;
+  box-sizing: border-box;
+  outline: none;
+  -moz-appearance: none;
+  transition: all 0.5s ease;
+  cursor: default;
 }
 
-#header {
-  display: grid;
-  justify-items: center;
-  background-color: #24527a;
-  height: 150px;
-  width: 1000px;
-  margin-left: 460px;
+body {
+  height: 100vh;
+  background-image: linear-gradient(45deg, #37e2d5, #52e5ac, #87e379, #bfdb43, #fbcb0a, #f94c66);
+  background-size: 300%;
+  color: white;
+  font-family: "Cascadia Code";
+  animation: bg-animation 5s infinite alternate;
 }
 
-#main {
-  margin-top: 30px;
-  color: #5dacbd;
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+header,
+form {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#input {
-  background-color: #ececec;
-  margin-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 50px;
-  font-size: 20px;
+header {
+  font-size: max(2em, 4vw);
+  font-weight: 900;
+}
+
+form {
+  font-size: min(2vw, 0.8em);
+}
+
+@media (min-width: 1080px) {
+  header,
+form {
+    min-height: 20vh;
+  }
+}
+#input-title {
+  background: white;
+  padding: 0.5em;
+  font-size: 2.5em;
+}
+
+#input-title:focus {
+  background: transparent;
+  border-bottom: 3px solid white;
+}
+
+#input-title:focus + #add-container,
+#add-container:hover {
+  width: 8vh;
+  border-radius: 50%;
+}
+
+#add-container {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #add {
-  cursor: pointer;
-  margin-bottom: 20px;
-  height: 50px;
-  width: 100px;
-  font-size: 45px;
-  transition: 0.2s ease;
+  padding: 0.2em;
+  font-size: 3.5em;
+  background-image: linear-gradient(45deg, #37e2d5, #52e5ac, #87e379, #bfdb43, #fbcb0a, #f94c66);
+  background-size: 300%;
+  background-clip: text;
+  background-color: white;
+  color: transparent;
+  animation: bg-animation 5s infinite alternate;
 }
 
-#add:hover {
-  background-color:#5dacbd;
-  color: white;
+#input-title,
+#add {
+  height: 8vh;
 }
 
 #list {
-  display: flexbox;
-  margin-left: 460px;
-}
-
-#list > div:nth-child(odd) {
-  background-color: #a7bcb9;
-}
-
-#list > div:nth-child(even) {
-  background-color: #e0ebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin-inline: auto;
+  width: max(20em, 65%);
+  list-style: none;
 }
 
 .todo {
-  display: grid;
-  height: 70px;
-  width: 1000px;
-  grid-template-columns: 9fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  width: inherit;
+  background: white;
+  font-size: 2em;
 }
-
-.delete:hover {
-  opacity: 100;
-  background-color: #F5431D;
-  transition: 0.4s ease;
-}
-
 
 .title {
-  display: inline-block;
-  font-size: 40px;
-  padding-left: 10px;
-  padding-top: 10px;
-  transition: 0.3s ease;
-}
-
-.title:hover {
-  cursor: pointer;
-  background-color: white;
-}
-
-.checked {
-  display: inline;
-  text-decoration: line-through;
-  background-color: rgba(106, 103, 103, 0.635);
-  color: white;
-  transition: 0.3s ease;
-}
-
-
-.checked:hover {
+  flex: 1;
+  margin: 1vh;
   color: black;
 }
 
+.checkmark,
+.trash {
+  height: inherit;
+  width: 7vh;
+  padding: 1rem;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
 
+.checkmark {
+  background-color: #87e379;
+}
+
+.trash {
+  background-color: #f94c66;
+}
+
+.completed {
+  opacity: 0.5;
+  text-decoration: line-through black;
+}
+
+.deleted {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}/*# sourceMappingURL=styles.css.map */
