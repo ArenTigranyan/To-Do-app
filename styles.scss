@@ -1,4 +1,4 @@
-$gradient: linear-gradient(
+$light: linear-gradient(
   45deg,
   #37e2d5,
   #52e5ac,
@@ -26,7 +26,7 @@ $gradient: linear-gradient(
 
 body {
   min-height: 100vh;
-  background-image: $gradient;
+  background-image: $light;
   background-size: 300%;
   color: white;
   font-family: 'Cascadia Code';
@@ -85,7 +85,7 @@ form {
   #add {
     padding: 0.2em;
     font-size: 3.5em;
-    background-image: $gradient;
+    background-image: $light;
     background-size: 300%;
     background-clip: text;
     background-color: white;
