@@ -7,23 +7,31 @@
   padding: 0;
   border: none;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   cursor: default;
 }
 
 body {
   min-height: 100vh;
-  background-image: linear-gradient(45deg, #37e2d5, #52e5ac, #87e379, #bfdb43, #fbcb0a, #f94c66);
+  background-image: linear-gradient(
+    45deg,
+    #37e2d5,
+    #52e5ac,
+    #87e379,
+    #bfdb43,
+    #fbcb0a,
+    #f94c66
+  );
   background-size: 300%;
   color: white;
-  font-family: "Cascadia Code";
+  font-family: 'Cascadia Code';
   -webkit-animation: bg-animation 5s infinite alternate;
-          animation: bg-animation 5s infinite alternate;
+  animation: bg-animation 5s infinite alternate;
 }
 
 @-webkit-keyframes bg-animation {
@@ -50,11 +58,11 @@ form {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 header {
@@ -68,7 +76,7 @@ form {
 
 @media (min-width: 1080px) {
   header,
-form {
+  form {
     min-height: 20vh;
   }
 }
@@ -89,24 +97,31 @@ form {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 #add-container #add {
   padding: 0.2em;
   font-size: 3.5em;
-  background-image: linear-gradient(45deg, #37e2d5, #52e5ac, #87e379, #bfdb43, #fbcb0a, #f94c66);
+  background-image: linear-gradient(
+    45deg,
+    #37e2d5,
+    #52e5ac,
+    #87e379,
+    #bfdb43,
+    #fbcb0a,
+    #f94c66
+  );
   background-size: 300%;
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   background-color: white;
   color: transparent;
   -webkit-animation: bg-animation 5s infinite alternate;
-          animation: bg-animation 5s infinite alternate;
-  -webkit-transition-duration: 0.1s;
+  animation: bg-animation 5s infinite alternate;
 }
 
 #input-title:focus {
@@ -122,7 +137,7 @@ form {
 #add-container:hover #add {
   color: white;
   -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
 }
 
 #list {
@@ -131,14 +146,14 @@ form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 0.5em;
   margin-inline: auto;
   width: max(20em, 65%);
@@ -149,11 +164,11 @@ form {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 7vh;
   width: inherit;
   background: white;
@@ -166,8 +181,8 @@ form {
 
 .title {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   margin: 1vh;
   color: black;
 }
@@ -193,11 +208,11 @@ form {
 .completed {
   opacity: 0.5;
   -webkit-text-decoration: line-through black;
-          text-decoration: line-through black;
+  text-decoration: line-through black;
 }
 
 .deleted {
   -webkit-transform: translateY(8rem) rotateZ(20deg);
-          transform: translateY(8rem) rotateZ(20deg);
+  transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
-}/*# sourceMappingURL=styles.css.map */
+}
