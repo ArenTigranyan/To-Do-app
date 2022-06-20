@@ -127,7 +127,7 @@ form {
     height: 7vh;
     width: inherit;
     background: white;
-    font-size: max(1.7rem, 3vmin);
+    font-size: min(2.5rem, 2.5vmax);
   }
   .todo:hover {
     width: max(70%, 11em);
@@ -146,7 +146,7 @@ form {
 .trash {
   height: inherit;
   width: 7vh;
-  padding: 1rem;
+  padding: auto;
   color: white;
   font-size: 1em;
   cursor: pointer;
