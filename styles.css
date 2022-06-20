@@ -159,7 +159,7 @@ form {
   height: 7vh;
   width: inherit;
   background: white;
-  font-size: min(2.5rem, 2.5vmax);
+  font-size: min(2.5rem, (2.5vmax + 2.5vmin) / 2);
 }
 #list .todo:hover {
   width: max(70%, 11em);
