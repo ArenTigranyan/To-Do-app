@@ -56,7 +56,7 @@ header {
 }
 
 form {
-  font-size: min(2vw, 0.8em);
+  font-size: min(2vmin, 0.8em);
 }
 
 @media (min-width: 1080px) {
@@ -92,6 +92,7 @@ form {
     background-color: white;
     color: transparent;
     animation: bg-animation 5s infinite alternate;
+    transition-duration: 0.3s;
     -webkit-transition-duration: 0.1s;
   }
 }
@@ -126,7 +127,7 @@ form {
     height: 7vh;
     width: inherit;
     background: white;
-    font-size: 2em;
+    font-size: max(1.7rem, 3vmin);
   }
   .todo:hover {
     width: max(70%, 11em);
@@ -138,6 +139,7 @@ form {
   flex: 1;
   margin: 1vh;
   color: black;
+  font-size: 1.5em;
 }
 
 .checkmark,
